@@ -30,7 +30,7 @@
     <!-- /.card-body -->
     <div class="card-footer clearfix">
         <ul class="pagination pagination-sm m-0 float-right">
-          {{--$employees->links('pagination::bootstrap-4');--}}        
+          {{$products->links('pagination::bootstrap-4');}}
         </ul>
       </div>
     </div>
@@ -40,39 +40,29 @@
           <tr>
             <th style="width: 10px">#</th>
             <th class="col-1">Photo</th>
-            <th>Fullname</th>
-            <th>Gender</th>
-            <th>Email</th>
-            <th>Tel</th>
-            <th>age</th>
-            <th>Address</th>
-            <th>status</th>
+            <th>Productname</th>
+            <th>Price</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody>
-            {{--@foreach ($employees as $data)--}}
+            @foreach ($products as $data)
             <tr>
-                <td style="width: 10px">{{--$data->id--}}</td>
-                <td><img src="{{--$data->avartar--}}" class="img-fluid" ></td>
-                <td>{{--$data->fullname--}}</td>
-                <td>{{--$data->gender--}}</td>
-                <td>{{--$data->email --}}</td>
-                <td>{{--$data->tel--}}</td>
-                <td>{{--$data->age--}}</td>
-                <td>{{--$data->address--}}</td>
-                <td>{{--$data->status--}}</td>
+                <td style="width: 10px">{{$data->id}}</td>
+                <td><img src="{{$data->image}}" class="img-fluid" ></td>
+                <td>{{$data->name}}</td>
+                <td>{{number_format($data->price,2)}}</td>
+                <td>{{$data->description}}</td>
               </tr> 
-            {{--  @endforeach--}}
+            @endforeach
 <tfoot>
+  <tr>
     <th style="width: 10px">#</th>
-    <th>Photo</th>
-    <th>Fullname</th>
-    <th>Gender</th>
-    <th>Email</th>
-    <th>Tel</th>
-    <th>age</th>
-    <th>Address</th>
-    <th>status</th>
+    <th class="col-1">Photo</th>
+    <th>Productname</th>
+    <th>Price</th>
+    <th>Description</th>
+  </tr>
 
 </tfoot>
         </tbody>
@@ -82,7 +72,7 @@
     <!-- /.card-body -->
     <div class="card-footer clearfix">
       <ul class="pagination pagination-sm m-0 float-right">
-        {{--$employees->links('pagination::bootstrap-4');--}}        
+        {{$products->links('pagination::bootstrap-4');}}
       </ul>
     </div>
   </div>

@@ -23,8 +23,8 @@ class ProductFactory extends Factory
         $pd=['monitor','mouse','keyboard','memory','cpu','mainbaord','case','ups','powersupply'];
             return [
                 'name' => $this->faker->randomElement($pd),
-                'slug' => $this->faker->name(),
-                'description' => $this->faker->paragraphs(2),
+                'slug' => $this->faker->text(100),
+                'description' => $this->faker->text(100),
                 'price' => $this->faker->randomFloat(2,1000000, 9999999),
                 'image' => $this->faker->imageUrl(400,300)
             ];

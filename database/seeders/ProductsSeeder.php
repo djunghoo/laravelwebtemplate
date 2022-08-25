@@ -28,8 +28,7 @@ $data = [
         'slug' => 'test',
         'description' => 'LED 17 inc',
         'price' => 1000000.00,
-        'image' => 'noavatar.jpg',
-        'status' => 1
+        'image' => 'noavatar.jpg'
     ]
 ];
 

@@ -28,7 +28,6 @@ class BackendController extends Controller
     /*$employees=Employee::where('age','>','18')->orderBy('id','desc')->paginate(25);
    //return $employees;*/
    $products=Product::orderBy('id','desc')->paginate(25);
-
    return view('backend.pages.products',compact('products'));
 }
 
